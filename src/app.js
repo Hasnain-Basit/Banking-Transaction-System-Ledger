@@ -15,7 +15,11 @@ const transactionRoutes = require("./routes/transaction.routes")
 app.use("/api/auth", authRouter)
 app.use("/api/accounts", accountRouter)
 app.use("/api/transaction", transactionRoutes)
-  
+// dummy API
+app.get("/", (req, res) => {
+    res.send("Service is up and running")
+})
+
 
 
 module.exports = app
